@@ -1,0 +1,9 @@
+package com.taotao.common.pojo;
+
+import java.util.List;
+
+public class EUDataGridResult {
+	private long total;
+	private List<?> rows;
+	
+}
