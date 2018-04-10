@@ -20,27 +20,26 @@ public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
-	
+
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public TbItem getItemById(@PathVariable Long itemId) {
-		TbItem tbItem=itemService.getItemById(itemId);
+		TbItem tbItem = itemService.getItemById(itemId);
 		return tbItem;
 	}
-	
+
 	@RequestMapping("/item/list")
 	@ResponseBody
-	public EUDataGridResult getItemList(Integer page,Integer rows) {
-		EUDataGridResult result=itemService.getItemList(page, rows);
+	public EUDataGridResult getItemList(Integer page, Integer rows) {
+		EUDataGridResult result = itemService.getItemList(page, rows);
 		return result;
 	}
-	
-	@RequestMapping(value="/item/save",method=RequestMethod.POST)
+
+	@RequestMapping(value = "/item/save", method = RequestMethod.POST)
 	@ResponseBody
-	/*使用TbItem直接接收，要求TbItem属性与表单中的name一一对应*/
-	public TaotaoResult createItem(TbItem item)
-	{
-		TaotaoResult result= itemService.createItem(item);
+	/* 使用TbItem直接接收，要求TbItem属性与表单中的name一一对应 */
+	public TaotaoResult createItem(TbItem item, String desc) throws Exception {
+		TaotaoResult result = itemService.createItem(item, desc);
 		return result;
 	}
 }

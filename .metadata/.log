@@ -1910,3 +1910,6 @@ java.lang.IllegalArgumentException: Version 8.0 of project facet jst.appclient d
 
 !ENTRY org.eclipse.wst.server.discovery 1 0 2018-04-10 15:08:55.709
 !MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-04-10 17:06:49.212
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
