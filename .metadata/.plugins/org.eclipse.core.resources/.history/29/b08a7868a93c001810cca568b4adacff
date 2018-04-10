@@ -15,14 +15,6 @@ import com.taotao.pojo.TbItemExample;
 public class TestPageHelper {
 	
 	@Test
-	public void testBCryptPart() {
-		byte ret=0;
-		byte ret1=127;
-		ret|=ret1;
-		int a=0;
-	}
-	
-	@Test
 	public void testPageHelper(){
 		//创建一个spring容器
 		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");

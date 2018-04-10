@@ -18,8 +18,7 @@ public class TestPageHelper {
 	public void testBCryptPart() {
 		byte ret=0;
 		byte ret1=127;
-		ret|=ret1;
-		int a=0;
+		byte temp=ret|ret1;
 	}
 	
 	@Test
