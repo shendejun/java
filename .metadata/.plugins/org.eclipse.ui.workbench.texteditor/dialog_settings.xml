@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="select" key="selection"/>
+		<item value="itemParams" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="itemParams"/>
+			<item value="itemParam"/>
+			<item value="第四"/>
+			<item value="Base_Column_List"/>
+			<item value="selectByExample"/>
 			<item value="SELECT"/>
 			<item value="select"/>
 			<item value="txAdvice"/>
@@ -18,7 +23,6 @@
 			<item value="test"/>
 			<item value="page"/>
 			<item value="maven-compiler-plugin"/>
-			<item value="Update_By_Example_Where_Clause"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -27,7 +31,7 @@
 		<item value="300" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="410" key="DIALOG_HEIGHT"/>
-		<item value="823" key="DIALOG_X_ORIGIN"/>
-		<item value="664" key="DIALOG_Y_ORIGIN"/>
+		<item value="1307" key="DIALOG_X_ORIGIN"/>
+		<item value="303" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
