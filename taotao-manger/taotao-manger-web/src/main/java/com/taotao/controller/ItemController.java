@@ -38,8 +38,8 @@ public class ItemController {
 	@RequestMapping(value = "/item/save", method = RequestMethod.POST)
 	@ResponseBody
 	/* 使用TbItem直接接收，要求TbItem属性与表单中的name一一对应 */
-	public TaotaoResult createItem(TbItem item, String desc) throws Exception {
-		TaotaoResult result = itemService.createItem(item, desc);
+	public TaotaoResult createItem(TbItem item, String desc,String itemParams) throws Exception {
+		TaotaoResult result = itemService.createItem(item, desc,itemParams);
 		return result;
 	}
 }

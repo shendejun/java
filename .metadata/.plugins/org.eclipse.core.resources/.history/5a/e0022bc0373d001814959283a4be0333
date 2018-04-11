@@ -1,0 +1,25 @@
+package com.taotao.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.mapper.TbItemParamItemMapper;
+import com.taotao.pojo.TbItemParamExample;
+import com.taotao.pojo.TbItemParamExample.Criteria;
+import com.taotao.service.ItemParamItemService;
+
+@Service
+public class ItemParamItemServiceImpl implements ItemParamItemService {
+
+	@Autowired
+	private TbItemParamItemMapper itemParamItemMapper;
+
+	@Override
+	public String getItemParamByItemId(Long itemId) {
+		TbItemParamExample example=new TbItemParamExample();
+		Criteria criteria= example.createCriteria();
+		criteria.andItemIdEqualTo(itemId);
+		itemParamItemMapper.selectByExample(example);
+		return null;
+	}
+}

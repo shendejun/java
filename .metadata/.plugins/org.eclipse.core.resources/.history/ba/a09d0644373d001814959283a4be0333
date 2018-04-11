@@ -1,0 +1,13 @@
+package com.taotao.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.taotao.service.ItemParamItemService;
+
+@Service
+public class ItemParamItemServiceImpl implements ItemParamItemService {
+	@Override
+	public String getItemParamByItemId(Long itemId) {
+		return null;
+	}
+}

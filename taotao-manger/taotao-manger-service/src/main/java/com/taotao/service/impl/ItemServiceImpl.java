@@ -13,11 +13,13 @@ import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.IDUtils;
 import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
-
+import com.taotao.mapper.TbItemParamItemMapper;
 import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemDesc;
 import com.taotao.pojo.TbItemExample;
 import com.taotao.pojo.TbItemExample.Criteria;
+import com.taotao.pojo.TbItemParam;
+import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.ItemService;
 
 /*
@@ -28,9 +30,10 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
-
 	@Autowired
 	private TbItemDescMapper itemDescMapper;
+	@Autowired
+	private TbItemParamItemMapper itemParamItemMapper;
 
 	@Override
 	public TbItem getItemById(long itemId) {
@@ -67,7 +70,7 @@ public class ItemServiceImpl implements ItemService {
 	 * 新增商品
 	 */
 	@Override
-	public TaotaoResult createItem(TbItem item, String desc) throws Exception {
+	public TaotaoResult createItem(TbItem item, String desc,String itemParam) throws Exception {
 		// item补全
 		Long itemId = IDUtils.genItemId();
 		item.setId(itemId);
@@ -81,6 +84,26 @@ public class ItemServiceImpl implements ItemService {
 			// 抛异常了spring会自动回滚
 			throw new Exception();
 		}
+		//添加规格参数
+		result=insertItemParamItem(itemId, itemParam);
+		if (result.getStatus() != 200) {
+			// 抛异常了spring会自动回滚
+			throw new Exception();
+		}
+		return TaotaoResult.ok();
+		//service 整个方法执行完且执行正确才会忘SQL中插入数据
+	}
+	
+	/*
+	 * 插入规格数据
+	 * */
+	private TaotaoResult insertItemParamItem(Long itemId,String itemParam) {
+		TbItemParamItem itemParamItem=new TbItemParamItem();
+		itemParamItem.setItemId(itemId);
+		itemParamItem.setParamData(itemParam);
+		itemParamItem.setCreated(new Date());
+		itemParamItem.setUpdated(new Date());
+		itemParamItemMapper.insert(itemParamItem);
 		return TaotaoResult.ok();
 	}
 

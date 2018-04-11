@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestPageHelper" project="taotao-manger-web" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="com.taotao.controller.TestPageHelper" time="3.709">
-    <testcase name="testPageHelper" classname="com.taotao.controller.TestPageHelper" time="3.71"/>
-    <testcase name="testBCryptPart" classname="com.taotao.controller.TestPageHelper" time="0.0"/>
-  </testsuite>
-</testrun>
