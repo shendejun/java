@@ -3639,3 +3639,9 @@ org.eclipse.core.internal.resources.ResourceException: File not found: D:\ShenJu
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
 !SUBENTRY 1 org.eclipse.core.resources 4 368 2018-04-12 11:31:19.345
 !MESSAGE File not found: D:\ShenJun\JavaProjectStudy\workspace-template\taotao-portal\target\test-classes\com\taotao\httpclient\HttpClientTest.class.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-12 15:27:55.614
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-12 15:27:55.615
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
