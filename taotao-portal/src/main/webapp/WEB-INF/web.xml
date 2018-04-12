@@ -52,4 +52,9 @@
 		<!-- 此时拦截的不是/,而是*.html，所已静态资源不能放在WEB-INF中 -->
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>taotao-portal</servlet-name>
+		<!-- 这里需要在配置一个action拦截，因为.html后缀如果返回TaotaoResult格式的数据会报406错误，html后缀不能相应json数据 -->
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
 </web-app>
