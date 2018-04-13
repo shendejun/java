@@ -4,5 +4,9 @@
 <typeInfo handle="=taotao-manger-service/src\/main\/java&lt;com.taotao.service{PictureService.java[PictureService" modifiers="513" timestamp="1523340694898"/>
 <typeInfo handle="=taotao-manger-service/src\/main\/java&lt;com.taotao.service{ItemParamService.java[ItemParamService" modifiers="513" timestamp="1523412586352"/>
 <typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{ItemCatService.java[ItemCatService" modifiers="513" timestamp="1523437849987"/>
-<typeInfo handle="=taotao-manger-service/src\/main\/java&lt;com.taotao.service{ContentCategoryService.java[ContentCategoryService" modifiers="513" timestamp="1523442892135"/>
+<typeInfo handle="=taotao-manger-service/src\/main\/java&lt;com.taotao.service{ContentCategoryService.java[ContentCategoryService" modifiers="513" timestamp="1523444528873"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{ContentService.java[ContentService" modifiers="513" timestamp="1523495233017"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{ContentService.java[ContentService" modifiers="513" timestamp="1523500942627"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.dao{JedisClient.java[JedisClient" modifiers="513" timestamp="1523523766847"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{RedisService.java[RedisService" modifiers="513" timestamp="1523523592544"/>
 </typeInfoHistroy>

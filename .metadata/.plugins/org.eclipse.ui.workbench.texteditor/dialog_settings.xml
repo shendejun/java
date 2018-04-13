@@ -6,12 +6,19 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="insert" key="selection"/>
+		<item value="solrj.version" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="solrj.version"/>
+			<item value="jedis.version"/>
+			<item value="jedi"/>
+			<item value="ok"/>
+			<item value="406"/>
+			<item value="花千"/>
+			<item value="test"/>
 			<item value="insert"/>
 			<item value="taotao-manager"/>
 			<item value="itemParams"/>
@@ -20,13 +27,6 @@
 			<item value="Base_Column_List"/>
 			<item value="selectByExample"/>
 			<item value="SELECT"/>
-			<item value="select"/>
-			<item value="txAdvice"/>
-			<item value="service"/>
-			<item value="server"/>
-			<item value="时间"/>
-			<item value="fix"/>
-			<item value="test"/>
 		</list>
 		<list key="replacehistory">
 			<item value="taotao-portal"/>
