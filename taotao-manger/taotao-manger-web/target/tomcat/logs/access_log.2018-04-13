@@ -1,0 +1,16 @@
+127.0.0.1 - - [13/Apr/2018:11:48:55 +0800] "GET / HTTP/1.1" 200 2475 http-bio-8080-exec-1 1108
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /css/taotao.css HTTP/1.1" 304 - http-bio-8080-exec-5 14
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-2 9
+0:0:0:0:0:0:0:1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/icon.css HTTP/1.1" 304 - http-bio-8080-exec-4 10
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/jquery.easyui.min.js HTTP/1.1" 304 - http-bio-8080-exec-3 37
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/easyui.css HTTP/1.1" 304 - http-bio-8080-exec-6 17
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js HTTP/1.1" 304 - http-bio-8080-exec-7 5
+0:0:0:0:0:0:0:1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/common.js HTTP/1.1" 304 - http-bio-8080-exec-8 8
+0:0:0:0:0:0:0:1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/images/blank.gif HTTP/1.1" 304 - http-bio-8080-exec-8 2
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/images/panel_tools.png HTTP/1.1" 304 - http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/images/layout_arrows.png HTTP/1.1" 304 - http-bio-8080-exec-8 28
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/images/tabs_icons.png HTTP/1.1" 304 - http-bio-8080-exec-6 14
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /js/jquery-easyui-1.4.1/themes/default/images/tree_icons.png HTTP/1.1" 304 - http-bio-8080-exec-7 66
+127.0.0.1 - - [13/Apr/2018:11:48:56 +0800] "GET /favicon.ico HTTP/1.1" 404 997 http-bio-8080-exec-7 11
+127.0.0.1 - - [13/Apr/2018:11:50:43 +0800] "GET /solr/select?q=%E6%89%8B%E6%9C%BA&start=0&rows=60&df=item_keywords&hl=true&hl.fl=item_title&hl.simple.pre=%3Cem+style%3D%22color%3Ared%22%3E&hl.simple.post=%3C%2Fem%3E&wt=javabin&version=2 HTTP/1.1" 404 949 http-bio-8080-exec-3 2
+127.0.0.1 - - [13/Apr/2018:11:59:50 +0800] "GET /solr/select?q=%E6%89%8B%E6%9C%BA&start=0&rows=60&df=item_keywords&hl=true&hl.fl=item_title&hl.simple.pre=%3Cem+style%3D%22color%3Ared%22%3E&hl.simple.post=%3C%2Fem%3E&wt=javabin&version=2 HTTP/1.1" 404 949 http-bio-8080-exec-5 6
