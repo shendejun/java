@@ -1,8 +1,11 @@
 package com.taotao.sso.controller;
 
 import javax.naming.spi.DirStateFactory.Result;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpResponse;
 import org.aspectj.apache.bcel.generic.RET;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.json.MappingJacksonValue;
@@ -30,8 +33,7 @@ public class UserController {
 
 	@RequestMapping("/check/{param}/{type}")
 	@ResponseBody
-	public Object checkData(@PathVariable String param, 
-			@PathVariable Integer type, String callback) {
+	public Object checkData(@PathVariable String param, @PathVariable Integer type, String callback) {
 		TaotaoResult result = null;
 		// 参数有效性校验
 		if (StringUtils.isBlank(param)) {
@@ -52,7 +54,7 @@ public class UserController {
 				return result;
 			}
 		}
-		//调用服务
+		// 调用服务
 		try {
 			result = userService.checkData(param, type);
 		} catch (Exception e) {
@@ -66,12 +68,12 @@ public class UserController {
 			return result;
 		}
 	}
-	
-	@RequestMapping(value="/register", method=RequestMethod.POST)
+
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	@ResponseBody
 	public TaotaoResult createUser(TbUser user) {
 		try {
-			TaotaoResult result= userService.createUser(user);
+			TaotaoResult result = userService.createUser(user);
 			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -79,11 +81,11 @@ public class UserController {
 		}
 	}
 
-	@RequestMapping(value="/login",method=RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
-	public TaotaoResult userLogin(String username,String password) {
+	public TaotaoResult userLogin(String username, String password, HttpServletRequest request, HttpServletResponse response) {
 		try {
-			TaotaoResult result=userService.userLogin(username, password);
+			TaotaoResult result = userService.userLogin(username, password,request,response);
 			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -91,41 +93,41 @@ public class UserController {
 		}
 
 	}
-	
-	@RequestMapping(value="/token/{token}")
+
+	@RequestMapping(value = "/token/{token}")
 	@ResponseBody
-	public Object getUserByToken(@PathVariable("token") String token,String callback) {
-		TaotaoResult result=null;
+	public Object getUserByToken(@PathVariable("token") String token, String callback) {
+		TaotaoResult result = null;
 		try {
-			result=userService.getUserByToken(token);
+			result = userService.getUserByToken(token);
 		} catch (Exception e) {
 			e.printStackTrace();
-			result= TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+			result = TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
 		}
-		//判断是否为jsonp调用
-		if(StringUtils.isBlank(callback)) {
+		// 判断是否为jsonp调用
+		if (StringUtils.isBlank(callback)) {
 			return result;
-		}else {
-			MappingJacksonValue mappingJacksonValue=new MappingJacksonValue(result);
+		} else {
+			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
 			mappingJacksonValue.setJsonpFunction(callback);
 			return mappingJacksonValue;
 		}
 	}
-	
-	@RequestMapping(value="/loginout/{token}")
+
+	@RequestMapping(value = "/loginout/{token}")
 	@ResponseBody
-	public Object userLoginOut(@PathVariable("token") String token,String callback) {
-		TaotaoResult result=null;
+	public Object userLoginOut(@PathVariable("token") String token, String callback) {
+		TaotaoResult result = null;
 		try {
-			result=userService.userLoginOut(token);	
+			result = userService.userLoginOut(token);
 		} catch (Exception e) {
 			e.printStackTrace();
-			result=TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
-		}		
-		if(StringUtils.isBlank(callback)) {
+			result = TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+		if (StringUtils.isBlank(callback)) {
 			return result;
-		}else {
-			MappingJacksonValue mappingJacksonValue=new MappingJacksonValue(result);
+		} else {
+			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
 			mappingJacksonValue.setJsonpFunction(callback);
 			return mappingJacksonValue;
 		}

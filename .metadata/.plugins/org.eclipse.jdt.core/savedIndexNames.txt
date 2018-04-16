@@ -28,7 +28,6 @@ INDEX VERSION 1.130+D:\ShenJun\JavaProjectStudy\workspace-template\.metadata\.pl
 3773675999.index
 2031909724.index
 3174405385.index
-1106068908.index
 2357690016.index
 3052310960.index
 3478203430.index
@@ -55,7 +54,6 @@ INDEX VERSION 1.130+D:\ShenJun\JavaProjectStudy\workspace-template\.metadata\.pl
 4155307944.index
 1624831403.index
 3373106916.index
-235218938.index
 659564886.index
 1151442879.index
 187540121.index

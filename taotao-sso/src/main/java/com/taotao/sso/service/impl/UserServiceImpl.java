@@ -4,6 +4,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.common.utils.CookieUtils;
 import com.taotao.common.utils.JsonUtils;
 import com.taotao.mapper.TbUserMapper;
 import com.taotao.pojo.TbUser;
@@ -69,7 +73,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public TaotaoResult userLogin(String username, String password) {
+	public TaotaoResult userLogin(String username, String password,HttpServletRequest request, HttpServletResponse response) {
 		TbUserExample example = new TbUserExample();
 		Criteria criteria = example.createCriteria();
 		criteria.andUsernameEqualTo(username);
@@ -90,6 +94,8 @@ public class UserServiceImpl implements UserService {
 		// 把用户信息写入redis
 		jedisClient.set("REDIS_USER_SESSION" + ":" + token, JsonUtils.objectToJson(user));
 		jedisClient.expire("REDIS_USER_SESSION" + ":" + token, SSO_SESSION_EXPIRE);
+		//添加写cookie的逻辑,cookie的有效期默认是关闭浏览器就失效
+		CookieUtils.setCookie(request, response, "TT_TOKEN", token);
 		// 返回token
 		return TaotaoResult.ok(token);
 	}

@@ -21,6 +21,7 @@
 	<!-- 资源映射 -->
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
+	<!-- 这里没有设置图片的映射，是因为使用了nginx反向代理，把/images/路径的请求转发到图片服务器去处理了 -->
 	
 	<!-- 支持文件上传 -->  
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
