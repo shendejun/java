@@ -111,4 +111,23 @@ public class UserController {
 			return mappingJacksonValue;
 		}
 	}
+	
+	@RequestMapping(value="/loginout/{token}")
+	@ResponseBody
+	public Object userLoginOut(@PathVariable("token") String token,String callback) {
+		TaotaoResult result=null;
+		try {
+			result=userService.userLoginOut(token);	
+		} catch (Exception e) {
+			e.printStackTrace();
+			result=TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}		
+		if(StringUtils.isBlank(callback)) {
+			return result;
+		}else {
+			MappingJacksonValue mappingJacksonValue=new MappingJacksonValue(result);
+			mappingJacksonValue.setJsonpFunction(callback);
+			return mappingJacksonValue;
+		}
+	}
 }
