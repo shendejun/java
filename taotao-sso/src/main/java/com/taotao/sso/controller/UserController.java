@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,7 +30,8 @@ public class UserController {
 
 	@RequestMapping("/check/{param}/{type}")
 	@ResponseBody
-	public Object checkData(@PathVariable String param, @PathVariable Integer type, String callback) {
+	public Object checkData(@PathVariable String param, 
+			@PathVariable Integer type, String callback) {
 		TaotaoResult result = null;
 		// 参数有效性校验
 		if (StringUtils.isBlank(param)) {
@@ -74,6 +76,39 @@ public class UserController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+	}
+
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult userLogin(String username,String password) {
+		try {
+			TaotaoResult result=userService.userLogin(username, password);
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+
+	}
+	
+	@RequestMapping(value="/token/{token}")
+	@ResponseBody
+	public Object getUserByToken(@PathVariable("token") String token,String callback) {
+		TaotaoResult result=null;
+		try {
+			result=userService.getUserByToken(token);
+		} catch (Exception e) {
+			e.printStackTrace();
+			result= TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+		//判断是否为jsonp调用
+		if(StringUtils.isBlank(callback)) {
+			return result;
+		}else {
+			MappingJacksonValue mappingJacksonValue=new MappingJacksonValue(result);
+			mappingJacksonValue.setJsonpFunction(callback);
+			return mappingJacksonValue;
 		}
 	}
 }
