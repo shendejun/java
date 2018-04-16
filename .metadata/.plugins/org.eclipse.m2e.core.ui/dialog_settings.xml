@@ -9,8 +9,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="taotao-portal"/>
+			<item value="taotao-sso"/>
 			<item value="taotao-parent"/>
+			<item value="taotao-search"/>
+			<item value="taotao-portal"/>
 			<item value="taotao.portal"/>
 			<item value="taotao-rest"/>
 			<item value="taotao-res"/>
@@ -71,6 +73,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\ShenJun\JavaProjectStudy\workspace-template\taotao-manger\taotao-manger-web\src\main\java\com\taotao\controller\ContentCategoryController.java"/>
 			<item value="D:\ShenJun\JavaProjectStudy\workspace-template\taotao-rest"/>
 			<item value="D:\ShenJun\JavaProjectStudy\workspace-template\taotao-manger"/>
 		</list>

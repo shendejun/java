@@ -9,4 +9,12 @@
 <typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{ContentService.java[ContentService" modifiers="513" timestamp="1523500942627"/>
 <typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.dao{JedisClient.java[JedisClient" modifiers="513" timestamp="1523523766847"/>
 <typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{RedisService.java[RedisService" modifiers="513" timestamp="1523523592544"/>
+<typeInfo handle="=taotao-search/src\/main\/java&lt;com.taotao.search.dao{SearchDao.java[SearchDao" modifiers="513" timestamp="1523588314164"/>
+<typeInfo handle="=taotao-search/src\/main\/java&lt;com.taotao.search.service{SearchService.java[SearchService" modifiers="513" timestamp="1523589215232"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{SearchService.java[SearchService" modifiers="513" timestamp="1523600569547"/>
+<typeInfo handle="=taotao-rest/src\/main\/java&lt;com.taotao.rest.service{ItemService.java[ItemService" modifiers="513" timestamp="1523608223634"/>
+<typeInfo handle="=taotao-rest/C:\/Program Files\/Java\/jdk1.8.0_151\/jre\/lib\/rt.jar&lt;java.awt(ItemSelectable.class[ItemSelectable" modifiers="1537" timestamp="1512528838961"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.service{ItemService.java[ItemService" modifiers="513" timestamp="1523609670207"/>
+<typeInfo handle="=taotao-portal/src\/main\/java&lt;com.taotao.portal.pojo{Item.java[Item" modifiers="1" timestamp="1523602199114"/>
+<typeInfo handle="=taotao-sso/src\/main\/java&lt;com.taotao.sso.service{UserService.java[UserService" modifiers="513" timestamp="1523846049989"/>
 </typeInfoHistroy>
