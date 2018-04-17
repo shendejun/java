@@ -6,12 +6,17 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="taotao-sso" key="selection"/>
+		<item value="checkLogin" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="checkLogin"/>
+			<item value="域名"/>
+			<item value="login"/>
+			<item value="登录"/>
+			<item value="user"/>
 			<item value="taotao-manager"/>
 			<item value="taotao-search"/>
 			<item value="8083"/>
@@ -22,11 +27,6 @@
 			<item value="HttpSolrServer"/>
 			<item value="Example_Where_Clause"/>
 			<item value="countByExample"/>
-			<item value="solrj.version"/>
-			<item value="jedis.version"/>
-			<item value="jedi"/>
-			<item value="ok"/>
-			<item value="406"/>
 		</list>
 		<list key="replacehistory">
 			<item value="taotao-sso"/>
@@ -38,7 +38,7 @@
 		<item value="300" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="410" key="DIALOG_HEIGHT"/>
-		<item value="239" key="DIALOG_X_ORIGIN"/>
-		<item value="270" key="DIALOG_Y_ORIGIN"/>
+		<item value="831" key="DIALOG_X_ORIGIN"/>
+		<item value="377" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
